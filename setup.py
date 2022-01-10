@@ -13,6 +13,7 @@ setup(
     author_email="somewhere@over-the-rain.bow",
     url="https://github.com/difu/tnsmaster",
     packages=["tnsnames"],
+    python_requires='>=3.6, <4',
     install_requires=[
         "antlr4-python3-runtime>=4.5,<4.6",
         ],
@@ -21,9 +22,10 @@ setup(
     classifiers=[
         "Development Status :: 1 - Planning",
         "Intended Audience :: System Administrators",
-        "License :: OSI Approved :: MIT License",
         "Topic :: Database",
-        "Topic :: Utilities"
+        "Topic :: Utilities",
+        "License :: OSI Approved :: MIT License",
+        'Programming Language :: Python :: 3 :: Only',
     ],
     license="MIT"
 )
