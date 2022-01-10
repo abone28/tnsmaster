@@ -8,7 +8,7 @@ from tnsnames.tnsnamesParser import tnsnamesParser
 
 
 def main(argv):
-    input_file_stream = FileStream(argv[1])
+    input_file_stream = FileStream(argv[1], encoding=sys.getdefaultencoding())
     lexer = tnsnamesLexer(input_file_stream)
     stream = CommonTokenStream(lexer)
     parser = tnsnamesParser(stream)

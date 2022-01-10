@@ -1,5 +1,6 @@
 import argparse
 from io import StringIO
+import sys
 
 from antlr4 import FileStream, CommonTokenStream, ParseTreeWalker, InputStream
 
@@ -36,7 +37,7 @@ def main():
     listener_ora_style.set_ignore_value_case(not args.handlevaluecase)
 
     try:
-        input_file_stream = FileStream(args.tnsnamesFile)
+        input_file_stream = FileStream(args.tnsnamesFile, encoding=sys.getdefaultencoding())
     except FileNotFoundError:
         print(args.tnsnamesFile + " not found!")
         exit(1)
