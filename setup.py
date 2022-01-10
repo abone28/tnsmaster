@@ -1,6 +1,7 @@
 from distutils.core import setup
 
-with open("README.md") as readme:
+# Get the long description from the README file
+with open("README.rst") as readme:
     README_TEXT = readme.read()
 
 setup(
@@ -12,6 +13,9 @@ setup(
     author_email="somewhere@over-the-rain.bow",
     url="https://github.com/difu/tnsmaster",
     packages=["tnsnames"],
+    install_requires=[
+        "antlr4-python3-runtime>=4.5,<4.6",
+        ],
     data_files=[("tests", ["__init__.py", "test_aliasFinder.py",
                            "testFiles/tnsnames.ora"])],
     classifiers=[
